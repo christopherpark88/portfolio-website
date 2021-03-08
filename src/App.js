@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import HeaderCard from "./sections/Title";
+import { SkillsSection } from "./sections/Skills";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a> */}
         <HeaderCard />
       </header>
+      <SkillsSection />
     </div>
   );
 }

@@ -1,8 +1,8 @@
+import styled from "styled-components";
 import Box from "@material-ui/core/Box";
 import Fade from "@material-ui/core/Fade";
-import styled from "styled-components";
 import LightSpeed from "react-reveal/LightSpeed";
-import { SubHeader, HighlightSubheader } from "../common";
+import { MainHeader, HighlightSubHeader } from "../common";
 
 const TitleBox = styled(Box)`
   max-width: 70vw;
@@ -12,16 +12,16 @@ const HeaderCard = () => {
   return (
     <TitleBox id="title-box">
       <Fade in={true}>
-        <SubHeader>Hello!</SubHeader>
+        <MainHeader>Hello!</MainHeader>
       </Fade>
       <LightSpeed left delay={500}>
-        <HighlightSubheader>I'm Christopher Park</HighlightSubheader>
+        <HighlightSubHeader>I'm Christopher Park</HighlightSubHeader>
       </LightSpeed>
       <Fade in={true}>
-        <SubHeader>
+        <MainHeader>
           I'm a Full Stack Software Developer and a Student at the University of
           Waterloo
-        </SubHeader>
+        </MainHeader>
       </Fade>
     </TitleBox>
   );
