@@ -104,7 +104,7 @@ const DatabaseSection = () => {
 const CloudSection = () => {
   return (
     <Paper elevation={10}>
-      <div>test</div>
+      <div>test2</div>
     </Paper>
   );
 };
