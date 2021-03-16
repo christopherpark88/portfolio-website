@@ -25,9 +25,10 @@ export const WindowHeader = styled.h2`
   color: black;
 `;
 
-export const DetailsText = styled.h1`
-  font-family: "Newsreader", serif;
-  color: #292929;
+export const DetailsText = styled.h3`
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: italic;
+  color: black;
 `;
 
 export const SectionWrapper = styled(Box)`

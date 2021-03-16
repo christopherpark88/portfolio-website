@@ -1,7 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import HeaderCard from "./sections/Title";
-import { SkillsSection } from "./sections/Skills";
+import SkillsSection from "./sections/Skills";
+import WorkSection from "./sections/Work";
+import ProjectsSection from "./sections/Projects";
+import Work from "./sections/Work";
+import Projects from "./sections/Projects";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -22,6 +27,8 @@ function App() {
         <HeaderCard />
       </header>
       <SkillsSection />
+      <WorkSection />
+      <ProjectsSection />
     </div>
   );
 }

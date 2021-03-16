@@ -23,10 +23,32 @@ import pythonlogo from "../logos/pythonlogo.png";
 import reactlogo from "../logos/reactlogo.png";
 import nodelogo from "../logos/nodelogo.png";
 import typescriptlogo from "../logos/typescriptlogo.png";
+import graphqlogo from "../logos/graphqllogo.png";
 import reduxlogo from "../logos/reduxlogo.png";
 import numpylogo from "../logos/numpylogo.png";
 import pandaslogo from "../logos/pandaslogo.png";
 import matplotliblogo from "../logos/matplotlib.png";
+import htmlcsslogo from "../logos/htmlcsslogo.png";
+import materialuilogo from "../logos/materialuilogo.png";
+import styledcomponentslogo from "../logos/styledcomponentslogo.png";
+import databaselogo from "../logos/databaselogo.png";
+import postgresqllogo from "../logos/postgresqllogo.png";
+import dynamodblogo from "../logos/dynamodblogo.png";
+import sqllitelogo from "../logos/sqllitelogo.png";
+import cloudlogo from "../logos/cloudlogo.png";
+import awslogo from "../logos/awslogo.png";
+import qalogo from "../logos/qalogo.png";
+import cucumberlogo from "../logos/cucumberlogo.png";
+import mochalogo from "../logos/mochalogo.png";
+import jestlogo from "../logos/jestlogo.png";
+import chailogo from "../logos/chailogo.png";
+import webdriverlogo from "../logos/webdriverlogo.png";
+import devlogo from "../logos/devlogo.png";
+import gitlogo from "../logos/gitlogo.png";
+import dockerlogo from "../logos/dockerlogo.png";
+import travislogo from "../logos/travislogo.png";
+import jenkinslogo from "../logos/jenkinslogo.png";
+import sentrylogo from "../logos/sentrylogo.png";
 
 const LanguagesSection = () => {
   return (
@@ -52,6 +74,11 @@ const LanguagesSection = () => {
               <SmallIcon
                 avatar={<Avatar src={typescriptlogo} />}
                 label="Typescript"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={graphqlogo} />}
+                label="GraphQL"
                 color="primary"
               />
               <SmallIcon
@@ -90,32 +117,162 @@ const LanguagesSection = () => {
           </InfoWindow>
         </Fade>
       </Grid>
+      <Grid item xs={12} sm={6}>
+        <Fade left>
+          <InfoWindow elevation={10}>
+            <InfoTopic>
+              <LargeIcon src={htmlcsslogo}></LargeIcon>
+              <WindowHeader>HTML & CSS</WindowHeader>
+            </InfoTopic>
+            <InfoDetails>
+              <SmallIcon
+                avatar={<Avatar src={materialuilogo} />}
+                label="MaterialUI"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={styledcomponentslogo} />}
+                label="Styled Components"
+                color="primary"
+              />
+            </InfoDetails>
+          </InfoWindow>
+        </Fade>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Fade right>
+          <InfoWindow elevation={10}>
+            <InfoTopic>
+              <LargeIcon src={databaselogo}></LargeIcon>
+              <WindowHeader>Databases</WindowHeader>
+            </InfoTopic>
+            <InfoDetails>
+              <SmallIcon
+                avatar={<Avatar src={postgresqllogo} />}
+                label="PostgreSQL"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={dynamodblogo} />}
+                label="DynamoDB"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={sqllitelogo} />}
+                label="SQL Lite"
+                color="primary"
+              />
+            </InfoDetails>
+          </InfoWindow>
+        </Fade>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Fade left>
+          <InfoWindow elevation={10}>
+            <InfoTopic>
+              <LargeIcon src={cloudlogo}></LargeIcon>
+              <WindowHeader>Cloud Technology</WindowHeader>
+            </InfoTopic>
+            <InfoDetails>
+              <SmallIcon
+                avatar={<Avatar src={awslogo} />}
+                label="AWS"
+                color="primary"
+              />
+            </InfoDetails>
+          </InfoWindow>
+        </Fade>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Fade right>
+          <InfoWindow elevation={10}>
+            <InfoTopic>
+              <LargeIcon src={qalogo}></LargeIcon>
+              <WindowHeader>QA Tools</WindowHeader>
+            </InfoTopic>
+            <InfoDetails>
+              <SmallIcon
+                avatar={<Avatar src={cucumberlogo} />}
+                label="Cucumber.js"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={mochalogo} />}
+                label="Mocha"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={jestlogo} />}
+                label="Jest"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={chailogo} />}
+                label="Chai"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={webdriverlogo} />}
+                label="WebdriverIO"
+                color="primary"
+              />
+            </InfoDetails>
+          </InfoWindow>
+        </Fade>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Fade left>
+          <InfoWindow elevation={10}>
+            <InfoTopic>
+              <LargeIcon src={devlogo}></LargeIcon>
+              <WindowHeader>Other Developer Tools</WindowHeader>
+            </InfoTopic>
+            <InfoDetails>
+              <SmallIcon
+                avatar={<Avatar src={gitlogo} />}
+                label="Git"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={dockerlogo} />}
+                label="Docker"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={travislogo} />}
+                label="TravisCI"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={jenkinslogo} />}
+                label="Jenkins"
+                color="primary"
+              />
+              <SmallIcon
+                avatar={<Avatar src={sentrylogo} />}
+                label="Sentry"
+                color="primary"
+              />
+            </InfoDetails>
+          </InfoWindow>
+        </Fade>
+      </Grid>
     </Grid>
   );
 };
 
-const DatabaseSection = () => {
-  return (
-    <Paper elevation={10}>
-      <div>test</div>
-    </Paper>
-  );
-};
-const CloudSection = () => {
-  return (
-    <Paper elevation={10}>
-      <div>test2</div>
-    </Paper>
-  );
-};
-
-export const SkillsSection = () => {
+const SkillsSection = () => {
   return (
     <SectionWrapper>
       <SectionHeader>Skills</SectionHeader>
+      <DetailsText>
+        These are some skills I have for developing software, which can include
+        languages, frameworks, libraries, and more. The list is always growing
+        so check back later!
+      </DetailsText>
       <LanguagesSection />
-      <SectionHeader>Work Experiences</SectionHeader>
-      <SectionHeader>Projects</SectionHeader>
     </SectionWrapper>
   );
 };
+
+export default SkillsSection;
