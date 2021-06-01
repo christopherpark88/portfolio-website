@@ -7,23 +7,30 @@ import ProjectsSection from "./sections/Projects";
 import Work from "./sections/Work";
 import Projects from "./sections/Projects";
 import Footer from "./sections/Footer";
+import Sky from "react-sky";
+import javascriptlogo from "./logos/javascriptlogo.png";
+import pythonlogo from "./logos/pythonlogo.png";
+import reactlogo from "./logos/reactlogo.png";
+import nodelogo from "./logos/nodelogo.png";
+import typescriptlogo from "./logos/typescriptlogo.png";
 
 function App() {
   return (
     <div className="App">
+      {/* <Sky
+        images={{
+          0: javascriptlogo,
+          1: pythonlogo,
+          2: reactlogo,
+          3: nodelogo,
+          4: typescriptlogo,
+        }}
+        how={150}
+        time={40}
+        size={"100px"}
+        background={"palettedvioletred"}
+      /> */}
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
         <HeaderCard />
       </header>
       <SkillsSection />

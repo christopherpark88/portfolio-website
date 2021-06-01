@@ -18,6 +18,7 @@ import {
   DetailsText,
   AvatarText,
 } from "../common";
+import Sky from "react-sky";
 import javascriptlogo from "../logos/javascriptlogo.png";
 import pythonlogo from "../logos/pythonlogo.png";
 import reactlogo from "../logos/reactlogo.png";
@@ -50,7 +51,7 @@ import travislogo from "../logos/travislogo.png";
 import jenkinslogo from "../logos/jenkinslogo.png";
 import sentrylogo from "../logos/sentrylogo.png";
 
-const LanguagesSection = () => {
+/* const LanguagesSection = () => {
   return (
     <Grid container spacing={9}>
       <Grid item xs={12} sm={6}>
@@ -259,6 +260,52 @@ const LanguagesSection = () => {
       </Grid>
     </Grid>
   );
+}; */
+
+const SkillsDetails = () => {
+  const SkyDiv = styled.div`
+    position: relative;
+    width: 80vw;
+    height: 60vh;
+  `;
+  return (
+    <SkyDiv>
+      <Sky
+        images={{
+          0: javascriptlogo,
+          1: pythonlogo,
+          2: reactlogo,
+          3: nodelogo,
+          4: typescriptlogo,
+          5: awslogo,
+          6: chailogo,
+          7: cucumberlogo,
+          8: dockerlogo,
+          9: dynamodblogo,
+          10: graphqlogo,
+          11: htmlcsslogo,
+          12: jenkinslogo,
+          13: jestlogo,
+          14: materialuilogo,
+          15: matplotliblogo,
+          16: mochalogo,
+          17: numpylogo,
+          18: pandaslogo,
+          19: postgresqllogo,
+          20: reduxlogo,
+          21: sentrylogo,
+          22: sqllitelogo,
+          23: styledcomponentslogo,
+          24: travislogo,
+          25: webdriverlogo,
+        }}
+        how={300}
+        time={40}
+        size={"100px"}
+        background={"lightblue"}
+      />
+    </SkyDiv>
+  );
 };
 
 const SkillsSection = () => {
@@ -270,7 +317,7 @@ const SkillsSection = () => {
         languages, frameworks, libraries, and more. The list is always growing
         so check back later!
       </DetailsText>
-      <LanguagesSection />
+      <SkillsDetails />
     </SectionWrapper>
   );
 };

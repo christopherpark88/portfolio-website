@@ -5,11 +5,13 @@ import styled from "styled-components";
 import Chip from "@material-ui/core/Chip";
 
 export const MainHeader = styled.h2`
+  display: inline;
   font-family: "Noto Sans JP", sans-serif;
   color: #6b6b6b;
 `;
 
 export const HighlightSubHeader = styled.h2`
+  display: inline;
   font-family: "Noto Sans JP", sans-serif;
   color: #fc0352;
 `;
