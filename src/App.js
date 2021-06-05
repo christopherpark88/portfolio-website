@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import styled from "styled-components";
 import HeaderCard from "./sections/Title";
 import SkillsSection from "./sections/Skills";
 import WorkSection from "./sections/Work";
@@ -13,23 +14,19 @@ import pythonlogo from "./logos/pythonlogo.png";
 import reactlogo from "./logos/reactlogo.png";
 import nodelogo from "./logos/nodelogo.png";
 import typescriptlogo from "./logos/typescriptlogo.png";
+import AppBar from "@material-ui/core/AppBar";
+import Drawer from "@material-ui/core/Drawer";
+
+const NavDrawer = styled(Drawer)`
+  background-color: #1c0732;
+`;
 
 function App() {
   return (
     <div className="App">
-      {/* <Sky
-        images={{
-          0: javascriptlogo,
-          1: pythonlogo,
-          2: reactlogo,
-          3: nodelogo,
-          4: typescriptlogo,
-        }}
-        how={150}
-        time={40}
-        size={"100px"}
-        background={"palettedvioletred"}
-      /> */}
+      <NavDrawer variant="permanent">
+        <div>example</div>
+      </NavDrawer>
       <header className="App-header">
         <HeaderCard />
       </header>

@@ -13,13 +13,14 @@ export const MainHeader = styled.h2`
 export const HighlightSubHeader = styled.h2`
   display: inline;
   font-family: "Noto Sans JP", sans-serif;
-  color: #fc0352;
+  color: #ff0048;
 `;
 
 export const SectionHeader = styled.h1`
   font-family: "Noto Sans JP", sans-serif;
   font-style: italic;
-  color: #6b6b6b;
+  color: black;
+  text-align: ;
 `;
 
 export const WindowHeader = styled.h2`
@@ -30,7 +31,8 @@ export const WindowHeader = styled.h2`
 export const DetailsText = styled.h3`
   font-family: "Noto Sans JP", sans-serif;
   font-style: italic;
-  color: black;
+  color: #6b6b6b;
+  display: inline;
 `;
 
 export const SectionWrapper = styled(Box)`
@@ -68,4 +70,8 @@ export const LargeIcon = styled.img`
 
 export const SmallIcon = styled(Chip)`
   margin: 1%;
+`;
+
+export const GridTextSection = styled(Grid)`
+  text-align: left;
 `;

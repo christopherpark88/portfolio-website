@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Box from "@material-ui/core/Box";
+import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Chip from "@material-ui/core/Chip";
@@ -17,6 +18,7 @@ import {
   SmallIcon,
   DetailsText,
   AvatarText,
+  GridTextSection,
 } from "../common";
 import Sky from "react-sky";
 import javascriptlogo from "../logos/javascriptlogo.png";
@@ -262,11 +264,10 @@ import sentrylogo from "../logos/sentrylogo.png";
   );
 }; */
 
-const SkillsDetails = () => {
+const SkillsAnimation = () => {
   const SkyDiv = styled.div`
     position: relative;
-    width: 80vw;
-    height: 60vh;
+    height: 100vh;
   `;
   return (
     <SkyDiv>
@@ -298,11 +299,12 @@ const SkillsDetails = () => {
           23: styledcomponentslogo,
           24: travislogo,
           25: webdriverlogo,
+          26: gitlogo,
         }}
         how={300}
-        time={40}
-        size={"100px"}
-        background={"lightblue"}
+        time={150}
+        size={"50px"}
+        background={"white"}
       />
     </SkyDiv>
   );
@@ -311,13 +313,28 @@ const SkillsDetails = () => {
 const SkillsSection = () => {
   return (
     <SectionWrapper>
-      <SectionHeader>Skills</SectionHeader>
-      <DetailsText>
-        These are some skills I have for developing software, which can include
-        languages, frameworks, libraries, and more. The list is always growing
-        so check back later!
-      </DetailsText>
-      <SkillsDetails />
+      <Grid container spacing={2}>
+        <GridTextSection item xs={6}>
+          <SectionHeader>Skills</SectionHeader>
+          <DetailsText>As a</DetailsText>
+          <DetailsText style={{ color: "Black" }}>
+            &nbsp;Full Stack Developer&nbsp;
+          </DetailsText>
+          <DetailsText>
+            I specialize in both the backend and frontend of applications. These
+            are some of the tools I've used while maintaing and developing
+            projects.
+            <br />
+            <br />
+          </DetailsText>
+          <Divider />
+          <SectionHeader>FRONT-END ENGINEERING</SectionHeader>
+          <SectionHeader>BACK-END ENGINEERING</SectionHeader>
+        </GridTextSection>
+        <Grid item xs={6}>
+          <SkillsAnimation />
+        </Grid>
+      </Grid>
     </SectionWrapper>
   );
 };

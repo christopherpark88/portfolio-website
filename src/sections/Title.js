@@ -31,22 +31,22 @@ const HeaderCard = () => {
   return (
     <TitleBox id="title-box">
       <MainHeader>
-        <Fade right cascade>
+        <Fade down cascade>
           Hello!
         </Fade>
       </MainHeader>
       <HighlightSubHeader>
-        <Fade right cascade>
+        <Fade down cascade>
           I'm Christopher Park
         </Fade>
       </HighlightSubHeader>
       <MainHeader>
-        <Fade right cascade>
+        <Fade down cascade>
           A Full Stack Software Developer
         </Fade>
       </MainHeader>
       <MainHeader>
-        <Fade right cascade>
+        <Fade down cascade>
           & Student at the University of Waterloo
         </Fade>
       </MainHeader>
