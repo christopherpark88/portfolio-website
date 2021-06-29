@@ -10,10 +10,10 @@ export const MainHeader = styled.h2`
   color: #6b6b6b;
 `;
 
-export const HighlightSubHeader = styled.h2`
+export const HighlightHeader = styled.h2`
   display: inline;
   font-family: "Noto Sans JP", sans-serif;
-  color: #ff0048;
+  color: #ff2950;
 `;
 
 export const SectionHeader = styled.h1`
@@ -21,6 +21,12 @@ export const SectionHeader = styled.h1`
   font-style: italic;
   color: black;
   text-align: ;
+`;
+
+export const HighlightSectionHeader = styled.h1`
+  font-family: "Noto Sans JP", sans serif;
+  font-style: italic;
+  color: #ff2950;
 `;
 
 export const WindowHeader = styled.h2`
@@ -38,6 +44,7 @@ export const DetailsText = styled.h3`
 export const SectionWrapper = styled(Box)`
   margin-left: 5rem;
   margin-right: 5rem;
+  max-height: 100vh;
 `;
 
 export const InfoSection = styled(Grid)``;

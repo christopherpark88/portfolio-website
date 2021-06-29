@@ -27,6 +27,7 @@ function App() {
       <NavDrawer variant="permanent">
         <div>example</div>
       </NavDrawer>
+
       <header className="App-header">
         <HeaderCard />
       </header>

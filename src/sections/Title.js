@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import Box from "@material-ui/core/Box";
 import Fade from "react-reveal/Fade";
 import LightSpeed from "react-reveal/LightSpeed";
-import { MainHeader, HighlightSubHeader } from "../common";
+import { MainHeader, HighlightHeader } from "../common";
 
 const TitleBox = styled(Box)`
   max-width: 70vw;
@@ -28,18 +28,30 @@ const CursorSpan = styled.span`
 `;
 
 const HeaderCard = () => {
+  const today = new Date();
+  const weekdays = new Array(7);
+  weekdays[0] = "Sunday";
+  weekdays[1] = "Monday";
+  weekdays[2] = "Tuesday";
+  weekdays[3] = "Wednesday";
+  weekdays[4] = "Thursday";
+  weekdays[5] = "Friday";
+  weekdays[6] = "Saturday";
+
+  const currentDay = weekdays[today.getDay()];
+
   return (
     <TitleBox id="title-box">
       <MainHeader>
         <Fade down cascade>
-          Hello!
+          {`Hello! Happy ${currentDay}!`}
         </Fade>
       </MainHeader>
-      <HighlightSubHeader>
+      <HighlightHeader>
         <Fade down cascade>
           I'm Christopher Park
         </Fade>
-      </HighlightSubHeader>
+      </HighlightHeader>
       <MainHeader>
         <Fade down cascade>
           A Full Stack Software Developer

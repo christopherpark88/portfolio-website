@@ -2,13 +2,18 @@ import styled from "styled-components";
 import Box from "@material-ui/core/Box";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Paper from "@material-ui/core/Paper";
 import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
 import Fade from "react-reveal/Fade";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import {
   MainHeader,
   SectionHeader,
+  HighlightSectionHeader,
   WindowHeader,
   SectionWrapper,
   InfoWindow,
@@ -53,221 +58,10 @@ import travislogo from "../logos/travislogo.png";
 import jenkinslogo from "../logos/jenkinslogo.png";
 import sentrylogo from "../logos/sentrylogo.png";
 
-/* const LanguagesSection = () => {
-  return (
-    <Grid container spacing={9}>
-      <Grid item xs={12} sm={6}>
-        <Fade left>
-          <InfoWindow elevation={10}>
-            <InfoTopic>
-              <LargeIcon src={javascriptlogo}></LargeIcon>
-              <WindowHeader>Javascript</WindowHeader>
-            </InfoTopic>
-            <InfoDetails>
-              <SmallIcon
-                avatar={<Avatar src={reactlogo} />}
-                label="React"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={nodelogo} />}
-                label="NodeJS"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={typescriptlogo} />}
-                label="Typescript"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={graphqlogo} />}
-                label="GraphQL"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={reduxlogo} />}
-                label="Redux"
-                color="primary"
-              />
-            </InfoDetails>
-          </InfoWindow>
-        </Fade>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Fade right>
-          <InfoWindow elevation={10}>
-            <InfoTopic>
-              <LargeIcon src={pythonlogo}></LargeIcon>
-              <WindowHeader>Python</WindowHeader>
-            </InfoTopic>
-            <InfoDetails>
-              <SmallIcon
-                avatar={<Avatar src={numpylogo} />}
-                label="Numpy"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={pandaslogo} />}
-                label="Pandas"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={matplotliblogo} />}
-                label="Matplotlib"
-                color="primary"
-              />
-            </InfoDetails>
-          </InfoWindow>
-        </Fade>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Fade left>
-          <InfoWindow elevation={10}>
-            <InfoTopic>
-              <LargeIcon src={htmlcsslogo}></LargeIcon>
-              <WindowHeader>HTML & CSS</WindowHeader>
-            </InfoTopic>
-            <InfoDetails>
-              <SmallIcon
-                avatar={<Avatar src={materialuilogo} />}
-                label="MaterialUI"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={styledcomponentslogo} />}
-                label="Styled Components"
-                color="primary"
-              />
-            </InfoDetails>
-          </InfoWindow>
-        </Fade>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Fade right>
-          <InfoWindow elevation={10}>
-            <InfoTopic>
-              <LargeIcon src={databaselogo}></LargeIcon>
-              <WindowHeader>Databases</WindowHeader>
-            </InfoTopic>
-            <InfoDetails>
-              <SmallIcon
-                avatar={<Avatar src={postgresqllogo} />}
-                label="PostgreSQL"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={dynamodblogo} />}
-                label="DynamoDB"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={sqllitelogo} />}
-                label="SQL Lite"
-                color="primary"
-              />
-            </InfoDetails>
-          </InfoWindow>
-        </Fade>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Fade left>
-          <InfoWindow elevation={10}>
-            <InfoTopic>
-              <LargeIcon src={cloudlogo}></LargeIcon>
-              <WindowHeader>Cloud Technology</WindowHeader>
-            </InfoTopic>
-            <InfoDetails>
-              <SmallIcon
-                avatar={<Avatar src={awslogo} />}
-                label="AWS"
-                color="primary"
-              />
-            </InfoDetails>
-          </InfoWindow>
-        </Fade>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Fade right>
-          <InfoWindow elevation={10}>
-            <InfoTopic>
-              <LargeIcon src={qalogo}></LargeIcon>
-              <WindowHeader>QA Tools</WindowHeader>
-            </InfoTopic>
-            <InfoDetails>
-              <SmallIcon
-                avatar={<Avatar src={cucumberlogo} />}
-                label="Cucumber.js"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={mochalogo} />}
-                label="Mocha"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={jestlogo} />}
-                label="Jest"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={chailogo} />}
-                label="Chai"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={webdriverlogo} />}
-                label="WebdriverIO"
-                color="primary"
-              />
-            </InfoDetails>
-          </InfoWindow>
-        </Fade>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Fade left>
-          <InfoWindow elevation={10}>
-            <InfoTopic>
-              <LargeIcon src={devlogo}></LargeIcon>
-              <WindowHeader>Other Developer Tools</WindowHeader>
-            </InfoTopic>
-            <InfoDetails>
-              <SmallIcon
-                avatar={<Avatar src={gitlogo} />}
-                label="Git"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={dockerlogo} />}
-                label="Docker"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={travislogo} />}
-                label="TravisCI"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={jenkinslogo} />}
-                label="Jenkins"
-                color="primary"
-              />
-              <SmallIcon
-                avatar={<Avatar src={sentrylogo} />}
-                label="Sentry"
-                color="primary"
-              />
-            </InfoDetails>
-          </InfoWindow>
-        </Fade>
-      </Grid>
-    </Grid>
-  );
-}; */
-
 const SkillsAnimation = () => {
   const SkyDiv = styled.div`
     position: relative;
-    height: 100vh;
+    height: 80vh;
   `;
   return (
     <SkyDiv>
@@ -302,7 +96,7 @@ const SkillsAnimation = () => {
           26: gitlogo,
         }}
         how={300}
-        time={150}
+        time={1000}
         size={"50px"}
         background={"white"}
       />
@@ -310,30 +104,50 @@ const SkillsAnimation = () => {
   );
 };
 
+const SkillsAccordion = styled(Accordion)`
+  margin-bottom: 1rem;
+  border-style: solid;
+  border-width: thin;
+`;
+
 const SkillsSection = () => {
   return (
     <SectionWrapper>
-      <Grid container spacing={2}>
-        <GridTextSection item xs={6}>
-          <SectionHeader>Skills</SectionHeader>
+      <Grid container spacing={3}>
+        <Grid item xs={6}>
+          <HighlightSectionHeader>Skills</HighlightSectionHeader>
           <DetailsText>As a</DetailsText>
           <DetailsText style={{ color: "Black" }}>
             &nbsp;Full Stack Developer&nbsp;
           </DetailsText>
           <DetailsText>
             I specialize in both the backend and frontend of applications. These
-            are some of the tools I've used while maintaing and developing
-            projects.
+            are some of the skills I've developed over time. The list is always
+            growing!
             <br />
             <br />
           </DetailsText>
+          {/* <div style={{ margin: "auto", maxWidth: "60%" }}>
+        <SkillsAccordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            Click Me to See a List!
+          </AccordionSummary>
+          <AccordionDetails>
+            <ul>
+              <li>list</li>
+            </ul>
+          </AccordionDetails>
+        </SkillsAccordion>
+      </div> */}
           <Divider />
-          <SectionHeader>FRONT-END ENGINEERING</SectionHeader>
-          <SectionHeader>BACK-END ENGINEERING</SectionHeader>
-        </GridTextSection>
+        </Grid>
+
         <Grid item xs={6}>
           <SkillsAnimation />
         </Grid>
+        {/*  <SectionHeader>FRONT-END ENGINEERING</SectionHeader>
+      <DetailsText></DetailsText>
+      <SectionHeader>BACK-END ENGINEERING</SectionHeader> */}
       </Grid>
     </SectionWrapper>
   );
