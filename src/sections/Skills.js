@@ -98,8 +98,8 @@ const SkillsAnimation = () => {
           25: webdriverlogo,
           26: gitlogo,
         }}
-        how={300}
-        time={1000}
+        how={200}
+        time={50}
         size={"50px"}
         background={"white"}
       />
@@ -141,10 +141,36 @@ const SkillsSection = () => {
               </IconWrapper>
             </NameAndIcon>
           </div>
-          <div></div>
-          <WindowHeader>Front-End</WindowHeader>
-          <WindowHeader>Back-End</WindowHeader>
-          <WindowHeader>Other Dev Tools</WindowHeader>
+          <div>
+            <NameAndIcon>
+              <WindowHeader>Front-End</WindowHeader>
+            </NameAndIcon>
+            <NameAndIcon>
+              <IconWrapper>
+                <WebIcon style={{ verticalAlign: "bottom" }} />
+              </IconWrapper>
+            </NameAndIcon>
+          </div>
+          <div>
+            <NameAndIcon>
+              <WindowHeader>Back-End</WindowHeader>
+            </NameAndIcon>
+            <NameAndIcon>
+              <IconWrapper>
+                <WebIcon style={{ verticalAlign: "bottom" }} />
+              </IconWrapper>
+            </NameAndIcon>
+          </div>
+          <div>
+            <NameAndIcon>
+              <WindowHeader>Other Dev Tools</WindowHeader>
+            </NameAndIcon>
+            <NameAndIcon>
+              <IconWrapper>
+                <BuildIcon style={{ verticalAlign: "bottom" }} />
+              </IconWrapper>
+            </NameAndIcon>
+          </div>
         </Grid>
         <Grid item xs={6}>
           <SkillsAnimation />
