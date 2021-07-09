@@ -32,6 +32,7 @@ export const HighlightSectionHeader = styled.h1`
 export const WindowHeader = styled.h2`
   font-family: "Noto Sans JP", sans-serif;
   color: black;
+  display: inline;
 `;
 
 export const DetailsText = styled.h3`
@@ -75,10 +76,13 @@ export const LargeIcon = styled.img`
   margin-top: 0.5rem;
 `;
 
-export const SmallIcon = styled(Chip)`
-  margin: 1%;
+export const IconWrapper = styled.div`
+  margin: 0.5rem;
+  color: red;
 `;
 
-export const GridTextSection = styled(Grid)`
-  text-align: left;
+export const NameAndIcon = styled.div`
+  display: inline-block;
 `;
+
+export const WindowHeaderWrapper = styled.div``;

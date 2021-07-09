@@ -10,20 +10,23 @@ import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
 import Fade from "react-reveal/Fade";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import WebIcon from "@material-ui/icons/Web";
+import CodeIcon from "@material-ui/icons/Code";
+import BuildIcon from "@material-ui/icons/Build";
 import {
   MainHeader,
-  SectionHeader,
-  HighlightSectionHeader,
   WindowHeader,
   SectionWrapper,
   InfoWindow,
   InfoTopic,
   InfoDetails,
   LargeIcon,
-  SmallIcon,
+  IconWrapper,
   DetailsText,
   AvatarText,
   GridTextSection,
+  HighlightSectionHeader,
+  NameAndIcon,
 } from "../common";
 import Sky from "react-sky";
 import javascriptlogo from "../logos/javascriptlogo.png";
@@ -61,7 +64,7 @@ import sentrylogo from "../logos/sentrylogo.png";
 const SkillsAnimation = () => {
   const SkyDiv = styled.div`
     position: relative;
-    height: 80vh;
+    height: 100vh;
   `;
   return (
     <SkyDiv>
@@ -127,27 +130,25 @@ const SkillsSection = () => {
             <br />
             <br />
           </DetailsText>
-          {/* <div style={{ margin: "auto", maxWidth: "60%" }}>
-        <SkillsAccordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            Click Me to See a List!
-          </AccordionSummary>
-          <AccordionDetails>
-            <ul>
-              <li>list</li>
-            </ul>
-          </AccordionDetails>
-        </SkillsAccordion>
-      </div> */}
           <Divider />
+          <div>
+            <NameAndIcon>
+              <WindowHeader>My Languages</WindowHeader>
+            </NameAndIcon>
+            <NameAndIcon>
+              <IconWrapper>
+                <CodeIcon style={{ verticalAlign: "bottom" }} />
+              </IconWrapper>
+            </NameAndIcon>
+          </div>
+          <div></div>
+          <WindowHeader>Front-End</WindowHeader>
+          <WindowHeader>Back-End</WindowHeader>
+          <WindowHeader>Other Dev Tools</WindowHeader>
         </Grid>
-
         <Grid item xs={6}>
           <SkillsAnimation />
         </Grid>
-        {/*  <SectionHeader>FRONT-END ENGINEERING</SectionHeader>
-      <DetailsText></DetailsText>
-      <SectionHeader>BACK-END ENGINEERING</SectionHeader> */}
       </Grid>
     </SectionWrapper>
   );

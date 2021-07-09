@@ -1,9 +1,9 @@
-import { SectionHeader, SectionWrapper } from "../common";
+import { HighlightSectionHeader, SectionWrapper } from "../common";
 
 const WorkSection = () => {
   return (
     <SectionWrapper>
-      <SectionHeader>Work Experiences</SectionHeader>
+      <HighlightSectionHeader>Work Experiences</HighlightSectionHeader>
     </SectionWrapper>
   );
 };
